@@ -8,11 +8,14 @@ int main(){
 			scanf("%d",&A[i][j]);
 		}
 	}
+	int min = A[0][0];
 	for (i = 0;i<m;i++){
 		for(j = 0;j<n;j++){
-			printf("%d ",A[i][j]+1);
+			if (min > A[i][j]){
+				min = A[i][j];
+			}
 		}
-		printf("\n");
 	}
+	printf("%d",min);
 	return 0;
 }
